@@ -12,11 +12,3 @@ export interface IFilter {
 }
 
 export type FilterGroup = 'Equipment' | 'Muscle group';
-
-export const isIFilter = (obj: any): obj is IFilter => {
-    return obj && Array.isArray(obj.values) && typeof obj.filterGroup === 'string';
-}
-
-export const isIFilterArray = (obj: any): obj is IFilter[] => {
-    return (obj as any[]).every(value => isIFilter(value));
-}
