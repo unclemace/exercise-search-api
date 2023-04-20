@@ -6,5 +6,8 @@ export const filterMap = {
             values: valuesArr,
             filterGroup:name
         };
+    },
+    toFiltersArray: (rawArr: any[]):IFilter[] => {
+        return rawArr.map(el => filterMap.toFilter(el.values, el.name));
     }
 }
