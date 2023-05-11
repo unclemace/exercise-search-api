@@ -10,10 +10,16 @@ export interface IRatedExercise extends IExercise {
     rating: number;
 }
 
-export interface IFilterParams {
-    rated: boolean
+export interface IExerciseV2 {
+    name: string;
+    description: string;
+    image_src: string;
+    required_equipment: string;
+    muscle_group: {
+        name: string,
+        value: string
+    }[]
 }
-
 export interface IFilter {
     values: string[];
     filterGroup: FilterGroup;
